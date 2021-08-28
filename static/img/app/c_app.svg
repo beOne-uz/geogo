@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="612" viewBox="0 0 320 612">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_5622" data-name="Group 5622" transform="translate(-824 -153)">
+    <g id="Group_5620" data-name="Group 5620" transform="translate(0 -40)">
+      <g id="Rectangle_193" data-name="Rectangle 193" transform="translate(824 193)" fill="#fff" stroke="rgba(11,34,56,0.03)" stroke-width="8">
+        <rect width="320" height="578" rx="30" stroke="none"/>
+        <rect x="4" y="4" width="312" height="570" rx="26" fill="none"/>
+      </g>
+      <g id="Group_5619" data-name="Group 5619" transform="translate(33.253 86.123)">
+        <rect id="Rectangle_198" data-name="Rectangle 198" width="320" height="93" transform="translate(790.747 625.877)" fill="url(#linear-gradient)"/>
+        <rect id="Rectangle_199" data-name="Rectangle 199" width="320" height="93" transform="translate(790.747 595.877)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Group_5621" data-name="Group 5621" transform="translate(739.137 123.942)">
+      <line id="Line_67" data-name="Line 67" x2="14.764" transform="translate(117.363 63.558)" fill="none" stroke="#8991a3" stroke-width="1.5"/>
+      <line id="Line_68" data-name="Line 68" x2="14.764" transform="translate(117.363 68.26)" fill="none" stroke="#8991a3" stroke-width="1.5"/>
+      <line id="Line_69" data-name="Line 69" x2="14.764" transform="translate(117.363 72.962)" fill="none" stroke="#8991a3" stroke-width="1.5"/>
+    </g>
+    <rect id="Rectangle_200" data-name="Rectangle 200" width="30" height="5" rx="2.5" transform="translate(960 190)" fill="#0b2238" opacity="0.05"/>
+  </g>
+</svg>

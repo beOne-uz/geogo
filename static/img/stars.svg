@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="47" viewBox="0 0 47 47">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Rectangle_138" data-name="Rectangle 138" d="M0,0H39a8,8,0,0,1,8,8V47a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" transform="translate(898 4635)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="stars" transform="translate(-898 -4635)" clip-path="url(#clip-path)">
+    <path id="Path_360" data-name="Path 360" d="M0,0H46V46Z" transform="translate(899 4635)" fill="#ffc329"/>
+    <g id="star" transform="translate(925 4642)">
+      <path id="Icon_color" data-name="Icon color" d="M.118,4.582a.286.286,0,0,1-.1-.315l.047-.146a.286.286,0,0,1,.256-.2l3.724-.3L5.467.187A.3.3,0,0,1,5.765,0h.152A.286.286,0,0,1,6.19.187L7.624,3.62l3.724.3a.286.286,0,0,1,.256.2l.047.146a.286.286,0,0,1-.087.315L8.754,6.994l.862,3.619a.3.3,0,0,1-.111.309l-.169.093a.291.291,0,0,1-.326,0L5.84,9.093,2.653,11.033a.291.291,0,0,1-.326,0L2.2,10.946a.3.3,0,0,1-.111-.309l.839-3.643Z" transform="translate(1.167 1.167)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
