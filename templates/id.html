@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Вставка на страницу панорам Яндекса</title>
+    <title>{{name}}</title>
     <meta charset="utf-8">
 
     <style>
         html, body, .player {
             width: 100%;
             height: 100%;
-            margin: 0;
-            padding: 0;
+            margin: 10;
+            padding: 10;
         }
 
         .player {
-            height: 50%;
+            height: 100%;
         }
     </style>
     <!--
@@ -30,6 +30,7 @@
     }
 
     // Ищем панораму в переданной точке.
+    // ymaps.panorama.locate([55.733685, 37.588264]).done(
     ymaps.panorama.locate([55.733685, 37.588264]).done(
         function (panoramas) {
             // Убеждаемся, что найдена хотя бы одна панорама.
@@ -70,6 +71,6 @@
 </head>
 <body>
     <div id="player1" class="player"></div>
-    <div id="player2" class="player"></div>
+    <!-- <div id="player2" class="player"></div> -->
 </body>
 </html>
