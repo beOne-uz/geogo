@@ -4,7 +4,7 @@ from models import User,db
 from flask_login import login_user, logout_user, login_required, current_user
 from flask import render_template,redirect, url_for,request
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from places import  _places_uzb, UZB
 
 @app.route("/")
 def index():
@@ -24,6 +24,22 @@ def id():
         return render_template('id.html',name=current_user.name)
     else: 
         return render_template('id.html',name='Guest')
+
+@app.route("/main")
+def main():
+    if current_user.is_authenticated:
+        return render_template('main.html',name=current_user.name)
+    else:
+        return redirect(url_for('login'))
+
+@app.route("/main/usa")
+def main_usa():
+    if current_user.is_authenticated:
+        return render_template('id.html',name=current_user.name,locate=random_places('usa'))
+    else:
+        return redirect('auth/login')
+
+
 
 @app.route("/elements")
 def elements():
@@ -48,7 +64,7 @@ def login():
 
         # if the above check passes, then we know the user has the right credentials
         login_user(user, remember=remember)
-        return redirect(url_for('index'))
+        return redirect(url_for('main'))
 
 @app.route('/auth/signup',methods=['GET', 'POST'])
 def signup():
@@ -78,8 +94,25 @@ def signup():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('id'))
+    return redirect(url_for('index'))
 
+@app.route("/main/uzb/<id>", methods=['GET', 'POST'])
+def main_uzb(id):
+    if int(id) < len(UZB):
+        if current_user.is_authenticated:
+            if request.method == 'GET':
+                return render_template('id.html',name=current_user.name,  locate=UZB[int(id)], list_four=_places_uzb(int(id)),id=id)
+            elif request.method == 'POST':
+                result = request.form.get('result')
+                client_res = UZB[int(id)][0].split(' ')
+                if client_res[0] == result:
+                    return redirect(f'/main/uzb/{int(id) + 1}')
+                flash('Incorrect Answer')
+                return redirect(f'/main/uzb/{id}')
+        else:
+            return redirect(url_for('login'))
+    else:
+        return redirect(url_for('main'))
 # @app.route('/auth/signup',methods=['POST'])
 # def signup_post():
     

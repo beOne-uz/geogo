@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+        <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon" />
+    <!-- Bootstrap 4.5 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" />
+    <!-- animate -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}" type="text/css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}" />
+    <!-- aos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}" type="text/css" />
+    <!-- icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/icons.css') }}" type="text/css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" type="text/css" />
     <title>{{name}}</title>
     <meta charset="utf-8">
 
@@ -8,12 +24,26 @@
         html, body, .player {
             width: 100%;
             height: 100%;
-            margin: 10;
-            padding: 10;
+            margin: 0;
+            padding: 0;
+            display: flex
         }
 
         .player {
-            height: 100%;
+            width: 85%;
+        }
+        #window{
+            width: 20%;
+            background-color: #fef8f0;
+            justify-content: space-between;
+            
+        }
+        button{ 
+            width: 100%;
+            font-size: 15em;
+            height: 100px;
+            margin-top: 10px;
+            margin-bottom: 2ch;
         }
     </style>
     <!--
@@ -28,10 +58,11 @@
         // Если нет, то просто ничего не будем делать.
         return;
     }
-
+    var x = '{{ locate[1] }}'
+    var y = '{{ locate[2] }}'
     // Ищем панораму в переданной точке.
     // ymaps.panorama.locate([55.733685, 37.588264]).done(
-    ymaps.panorama.locate([55.733685, 37.588264]).done(
+    ymaps.panorama.locate([x, y]).done(
         function (panoramas) {
             // Убеждаемся, что найдена хотя бы одна панорама.
             if (panoramas.length > 0) {
@@ -54,23 +85,34 @@
         }
     );
 
-    // Для добавления панорамы на страницу также можно воспользоваться
-    // методом panorama.createPlayer. Этот метод ищет ближайщую панораму и
-    // в случае успеха создает плеер с найденной панорамой.
-    ymaps.panorama.createPlayer(
-       'player2',
-       [59.938557, 30.316198],
-       // Ищем воздушную панораму.
-       { layer: 'yandex#airPanorama' }
-    )
-        .done(function (player) {
-            // player – это ссылка на экземпляр плеера.
-        });
 });
     </script>
 </head>
 <body>
     <div id="player1" class="player"></div>
     <!-- <div id="player2" class="player"></div> -->
+    <div id="window">
+        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+  <form action="/main/uzb/{{id}}" method="post"> 
+        {% for item in list_four %}
+          <button class="btn btn_sm_primary p bg-yollow c-white rounded-2" name="result" value={{item[0]}}>
+            <i class="tio subdirectory_right mr-1 align-middle font-s-24"></i>
+            <span>{{item[0]}}</span>
+          </button>
+          {% endfor %}
+        </form>
+        <a href="{{ url_for('main')}}" class="btn btn_sm_primary p bg-blue c-white rounded-pill exit">
+            <i class="tio settings_back mr-1 align-middle font-s-16"></i>
+            <span>Menuga chiqish</span>
+          </a>
+    </div>
 </body>
 </html>
