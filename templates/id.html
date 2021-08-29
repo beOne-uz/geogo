@@ -46,35 +46,20 @@
             margin-bottom: 2ch;
         }
     </style>
-    <!--
-        Укажите свой API-ключ. Тестовый ключ НЕ БУДЕТ работать на других сайтах.
-        Получить ключ можно в Кабинете разработчика: https://developer.tech.yandex.ru/keys/
-    -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=94ce857c-843a-43bd-976f-645f2a501b16"></script>
     <script>
         ymaps.ready(function () {
-    // Для начала проверим, поддерживает ли плеер браузер пользователя.
     if (!ymaps.panorama.isSupported()) {
-        // Если нет, то просто ничего не будем делать.
         return;
     }
     var x = '{{ locate[1] }}'
     var y = '{{ locate[2] }}'
-    // Ищем панораму в переданной точке.
-    // ymaps.panorama.locate([55.733685, 37.588264]).done(
     ymaps.panorama.locate([x, y]).done(
         function (panoramas) {
-            // Убеждаемся, что найдена хотя бы одна панорама.
             if (panoramas.length > 0) {
-                // Создаем плеер с одной из полученных панорам.
                 var player = new ymaps.panorama.Player(
                         'player1',
-                        // Панорамы в ответе отсортированы по расстоянию
-                        // от переданной в panorama.locate точки. Выбираем первую,
-                        // она будет ближайшей.
                         panoramas[0],
-                        // Зададим направление взгляда, отличное от значения
-                        // по умолчанию.
                         { direction: [256, 16] }
                     );
             }

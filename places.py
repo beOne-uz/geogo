@@ -1,4 +1,3 @@
-import json
 import random
 UZB = {
     0: ['Amir Temur Xiyoboni', '41.311221', '69.279760'],
@@ -23,11 +22,9 @@ def _places_uzb(id: int):
         else:
             tasks = tasks + [UZB[x]] 
     if len(tasks) < 4:
-        print('E')
         tasks.insert(random.randint(0,len(tasks)),UZB[id])
 
     return tasks
 
-print(_places_uzb(2))
 
 

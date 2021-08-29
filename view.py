@@ -18,13 +18,6 @@ def about():
 def blog():
     return 'We are working on!!!'
 
-@app.route("/id")
-def id():
-    if current_user.is_authenticated:
-        return render_template('id.html',name=current_user.name)
-    else: 
-        return render_template('id.html',name='Guest')
-
 @app.route("/main")
 def main():
     if current_user.is_authenticated:
@@ -32,18 +25,8 @@ def main():
     else:
         return redirect(url_for('login'))
 
-@app.route("/main/usa")
-def main_usa():
-    if current_user.is_authenticated:
-        return render_template('id.html',name=current_user.name,locate=random_places('usa'))
-    else:
-        return redirect('auth/login')
 
 
-
-@app.route("/elements")
-def elements():
-    return render_template('elements.html')
 
 @app.route('/auth/login',methods=['GET', 'POST'])
 def login():
@@ -59,7 +42,7 @@ def login():
         # check if the user actually exists
         # take the user-supplied password, hash it, and compare it to the hashed password in the database
         if not user or not check_password_hash(user.password, password):
-            flash('Please check your login details and try again.')
+            flash('Yana bir bor akkount tekshiring')
             return redirect(url_for('login')) # if the user doesn't exist or password is wrong, reload the page
 
         # if the above check passes, then we know the user has the right credentials
@@ -79,7 +62,7 @@ def signup():
         user = User.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
 
         if user: # if a user is found, we want to redirect back to signup page so user can try again
-            flash('Email address already exists')
+            flash('Bu email adress mavjud')
             return redirect('signup')
 
         # create a new user with the form data. Hash the password so the plaintext version isn't saved.
@@ -107,16 +90,30 @@ def main_uzb(id):
                 client_res = UZB[int(id)][0].split(' ')
                 if client_res[0] == result:
                     return redirect(f'/main/uzb/{int(id) + 1}')
-                flash('Incorrect Answer')
+                flash('Noto\'g\'ri javob')
                 return redirect(f'/main/uzb/{id}')
         else:
             return redirect(url_for('login'))
     else:
         return redirect(url_for('main'))
-# @app.route('/auth/signup',methods=['POST'])
-# def signup_post():
-    
 
+
+@app.route("/main/usa")
+def main_usa():
+    if current_user.is_authenticated:
+        return 'Under development...'
+    else:
+        return redirect('auth/login')
+
+@app.route("/main/global")
+def main_global():
+    if current_user.is_authenticated:
+        return 'Under development...'
+    else:
+        return redirect('auth/login')
+@app.errorhandler(404) 
+def page_not_found(e):
+    return redirect(url_for('index'))
 # db.create_all()
 
     

@@ -8,15 +8,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Welcome to Rakon Multi-Purpose HTML5 Templates RTL Supported, built with HTML, JS, SASS, CSS3 and jQuery, RTL Supported, Easy User Experience and Responsive to all devices" />
-  <meta name="keywords"
-    content="HTML, CSS, JavaScript, Bootstrap, jQuery, Rakon, Themeforest, Template, envato, SASS, SCSS, HTML5, landing page, SaaS Product, SaaS Modern,  MultiPurpose, Crypto, Currency, ICO, Hosting, Agency, Mobile, App, Interior, Charity" />
-  <meta name="author" content="Rakon - Creative Multi-Purpose HTML5 Templates" />
 
-  <title>Charity - Creative Multi-Purpose HTML5 Templates</title>
+  <title>GeoGo loyihasi</title>
   <!-- favicon -->
-  <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon" />
+  <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon" /> -->
   <!-- Bootstrap 4.5 -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css" />
   <!-- animate -->
@@ -32,14 +27,12 @@
   <!-- normalize -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}" type="text/css" />
 
-  <!-- js for Brwoser -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
-
+<style>
+  .logo {
+    width: 100px !important;
+  }
+</style>
 <body>
   <div id="wrapper">
     <div id="content">
@@ -48,7 +41,7 @@
         <div class="container">
           <!-- navbar -->
           <nav class="navbar navbar-expand-lg navbar-light px-sm-0">
-            <a class="navbar-brand" href="../../index.html">
+            <a class="navbar-brand" href="{{url_for('index')}}">
               <img class="logo" src="{{ url_for('static', filename='img/logo-o.png') }}" alt="logo" />
             </a>
 
@@ -65,155 +58,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto nav-pills">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Stories">Stories</a>
-                </li>
-
-                <li class="nav-item dropdown dropdown-hover dropdown_full position-static">
-                  <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    elements
-
-                    <div class="icon_arrow">
-                      <i class="tio chevron_right"></i>
-                    </div>
-
-                  </a>
-                  <div class="dropdown-menu w-100 single-drop" aria-labelledby="navbarDropdown">
-                    <div class="dropdown_menu_nav">
-                      <!-- menu #1 -->
-                      <div class="item_colume">
-                        <span class="sub_title">Content</span>
-                        <div class="sub_nav_menu">
-                          <ul class="nav_meun">
-                            <li>
-                              <a href="../elements/accordion.html" class="dropdown-item">Accordion</a>
-                            </li>
-                            <li>
-                              <a href="../elements/carousel.html" class="dropdown-item">Carousel</a>
-                            </li>
-                            <li>
-                              <a href="../pricing/pricing-list.html" class="dropdown-item">Pricing List</a>
-                            </li>
-                            <li>
-                              <a href="../elements/pricing-table.html" class="dropdown-item">Pricing Table</a>
-                            </li>
-                            <li>
-                              <a href="../elements/tabs.html" class="dropdown-item">Tabs</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <!-- menu #2 -->
-                      <div class="item_colume">
-                        <span class="sub_title">Presentational</span>
-                        <div class="sub_nav_menu">
-                          <ul class="nav_meun">
-                            <li>
-                              <a href="../elements/blog-posts.html" class="dropdown-item">Blog Posts
-                                <span class="item_new">New</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="../elements/parallax.html" class="dropdown-item">Parallax</a>
-                            </li>
-
-                            <li>
-                              <a href="../elements/team.html" class="dropdown-item">Team Member</a>
-                            </li>
-                            <li>
-                              <a href="../elements/video.html" class="dropdown-item">Video</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <!-- menu #3 -->
-                      <div class="item_colume">
-                        <span class="sub_title">Typography</span>
-                        <div class="sub_nav_menu">
-                          <ul class="nav_meun">
-                            <li>
-                              <a href="../elements/call-to-action.html" class="dropdown-item">Call to Action</a>
-                            </li>
-                            <li>
-                              <a href="../elements/grid.html" class="dropdown-item">Grid</a>
-                            </li>
-                            <li>
-                              <a href="../elements/heading.html" class="dropdown-item">Heading</a>
-                            </li>
-                            <li>
-                              <a href="../elements/alert.html" class="dropdown-item">Alerts</a>
-                            </li>
-                            <li>
-                              <a href="../elements/testimonial.html" class="dropdown-item">Testimonials</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <!-- menu #4 -->
-                      <div class="item_colume">
-                        <span class="sub_title">Basic</span>
-                        <div class="sub_nav_menu">
-                          <ul class="nav_meun">
-                            <li>
-                              <a href="../elements/button.html" class="dropdown-item">Button</a>
-                            </li>
-                            <li>
-                              <a href="../elements/contact-form.html" class="dropdown-item">Contact Form</a>
-                            </li>
-                            <li>
-                              <a href="../elements/clients-logo.html" class="dropdown-item">Clients Logo</a>
-                            </li>
-                            <li>
-                              <a href="../elements/social-networks.html" class="dropdown-item">Social
-                                Networks</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <!-- menu #5 -->
-                      <div class="item_colume">
-                        <span class="sub_title">Infographic</span>
-                        <div class="sub_nav_menu">
-                          <ul class="nav_meun">
-                            <li>
-                              <a href="../elements/countdown.html" class="dropdown-item">Countdown</a>
-                            </li>
-                            <li>
-                              <a href="../elements/counter.html" class="dropdown-item">Counter</a>
-                            </li>
-                            <li>
-                              <a href="../elements/iconbox.html" class="dropdown-item">Icon Box</a>
-                            </li>
-                            <li>
-                              <a href="../elements/process.html" class="dropdown-item">Process</a>
-                            </li>
-                            <li>
-                              <a href="../elements/services.html" class="dropdown-item">Service Box</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <a class="nav-link" href="{{ url_for('index')}}">Bosh sahifa</a>
                 </li>
 
                 <li class="nav-item dropdown dropdown-hover">
-                  <!-- <a class="nav-link dropdown-toggle dropdown_menu" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Blog
-
-                    <div class="icon_arrow">
-                      <i class="tio chevron_right"></i>
-                    </div>
-
-                  </a> -->
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('blog')}}">Blog</a>
                   </li>
@@ -327,7 +175,7 @@
                 <a href="{{ url_for('logout')}}"
                   class="btn btn_sm_primary border-0 sweep_letter sweep_top bg-lightgreen c-white rounded-pill">
                   <div class="inside_item">
-                    <span data-hover="Log Out 👋">Donate Now</span>
+                    <span data-hover="Chiqish 👋">Akkauntdan</span>
                   </div>
                 </a>
               </div>
@@ -365,7 +213,7 @@
                 <div class="card-body">
                   <div class="about_post">
                     <span class="dot"></span>
-                    <time>15min</time>
+                    <time>Ishlayapti</time>
                   </div>
                   <a href="{{ url_for('main_uzb', id=0)}}" class="d-block">
                     <h5 class="card-title">O'zbekistonning Taniqli Joylari</h5>
@@ -391,9 +239,9 @@
                 <div class="card-body">
                   <div class="about_post">
                     <span class="dot"></span>
-                    <time>15min</time>
+                    <time>Tez orada qo'shiladi</time>
                   </div>
-                  <a href="{{ url_for('main_usa')}}" class="d-block">
+                  <a href="{{ url_for('main')}}" class="d-block">
                     <h5 class="card-title">Amerika Qo'shma Shtatlari</h5>
                     <p class="card-text">AQSHning end chiroyli parklarida bo'lib ko'ring, nafaqat yana 50 shtatidan ham.
                     </p>
@@ -416,7 +264,7 @@
                 <div class="card-body">
                   <div class="about_post">
                     <span class="dot"></span>
-                    <time>15min</time>
+                    <time>Tez orada qo'shiladi</time>
                   </div>
                   <a href="{{ url_for('main') }}" class="d-block">
                         <h5 class="card-title">Butun Dunyo</h5>

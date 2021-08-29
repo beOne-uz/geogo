@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from places import UZB as uz_code
+
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -28,4 +28,4 @@ def create_app():
 if __name__ == '__main__':
     from view import *
     db.create_all(create_app())
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)

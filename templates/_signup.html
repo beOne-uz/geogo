@@ -63,7 +63,7 @@
             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <div class="notification is-danger">
-                    {{ messages[0] }}. Kirish <a href="{{ url_for('login') }}">Kirish sahifasi</a>.
+                    {{ messages[0] }}. Go to <a href="{{ url_for('login') }}">login page</a>.
                 </div>
             {% endif %}
             {% endwith %}
@@ -71,33 +71,33 @@
             <form method="POST" action="/auth/signup" class="row">
               <div class="col-12">
                 <div class="title_sign">
-                  <h2>Akkaunt yaratish</h2>
-                  <p>Mavjud akkauntingiz bormi? <a href="{{ url_for('login') }}">Tizimga kirish</a></p>
+                  <h2>Create an account</h2>
+                  <p>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></p>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <label>Email manzil</label>
-                  <input type="email" name="email" class="form-control" placeholder="email manzil">
+                  <label>Email address</label>
+                  <input type="email" name="email" class="form-control" placeholder="email address">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Ismingiz</label>
+                  <label>First Name</label>
                   <input type="text"  name="name" class="form-control" placeholder="first name">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Familiyangiz</label>
+                  <label>Last Name</label>
                   <input type="text" class="form-control" placeholder="last Name" name="last_name">
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group --password" id="show_hide_password">
-                  <label>Parol</label>
+                  <label>Password</label>
                   <div class="input-group">
-                    <input type="password" name="password" class="form-control" data-toggle="password" placeholder="+6 belgi"
+                    <input type="password" name="password" class="form-control" data-toggle="password" placeholder="+6 Characters"
                       required="" />
                     <div class="input-group-prepend hide_show">
                       <a href=""><span class="input-group-text tio hidden_outlined"></span></a>
@@ -105,7 +105,6 @@
                   </div>
                 </div>
               </div>
-             
                 <button class="btn w-100 margin-t-3 btn_account bg-lightgreen c-white rounded-8">
                   Create
                   account
