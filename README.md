@@ -1,4 +1,4 @@
-# geogo
+# geogo https://geogo.herokuapp.com/
 
 ## 🔥Motivation 
 Our motivation to make this program is to **improve the quality of education for young school students** by replacing **boring geography lessons** with more interactive real scenario lessons. And we build this platform using **VR ( virtual reality )** technology in which students can see the **360-degree view of a place and guess the name of this place**. It is proven that children and even adults learn better by visual materials and having fun (playing) at the same time.
